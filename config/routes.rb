@@ -8,3 +8,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 end
+
+Rails.application.routes.draw do
+  # Generic syntax:
+  # verb "path", to: "controller#action"
+  get 'about', to: 'pages#about'
+end
+
+Rails.application.routes.draw do
+  root to: 'pages#home'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+end
